@@ -1,0 +1,104 @@
+#experience {
+  background: var(--theme-color-primary-light);
+}
+
+.paper {
+  position: relative;
+  border: 1px solid gray;
+  max-width: 1200px;
+  margin: 1em auto 3em;
+  padding: 4em;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px;
+  box-sizing: border-box;
+}
+
+.career-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--theme-color-primary-dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: var(--copy-font);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.resume-btn:hover {
+  background-color: var(--theme-color-secondary-dark);
+}
+
+#experience h4 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#experience h5 {
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+#experience h6 {
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+#experience ul {
+  padding-left: 20px;
+}
+
+#experience li {
+  margin-bottom: 6px;
+}
+
+#experience a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blue-squares {
+  list-style-type: square;
+}
+
+.blue-squares::marker {
+  color: var(--theme-color-primary-dark);
+}
+
+.blue-squares-outline {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.blue-squares-outline li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+.blue-squares-outline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 3px;
+  height: 3px;
+  border: 1.5px solid var(--theme-color-primary-dark);
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  .paper {
+padding: 1em;
+  }
+}

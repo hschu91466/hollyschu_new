@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Serif:ital,wght@0,100;0,300;0,400;1,100&display=swap");
+
+:root {
+  /* Fonts */
+  --display-font: "Italiana", sans-serif;
+  --copy-font: "Roboto Serif", sans-serif;
+
+  /* Ocean Palette */
+  --theme-color-primary-dark: rgba(0, 130, 224, 0.97);
+  --theme-color-secondary-dark: rgba(0, 192, 209, 0.8);
+  --theme-color-tertiary-dark: rgba(95, 149, 187, 0.6);
+
+  --theme-color-primary-medium: rgba(138, 231, 212, 0.8);
+  --theme-color-secondary-medium: rgba(64, 200, 180, 0.7);
+
+  --theme-color-primary-light: rgba(242, 234, 218, 0.6);
+  --theme-color-secondary-light: rgba(194, 178, 128, 0.7);
+  --theme-color-tertiary-light: rgba(254, 229, 224, 0.8);
+  --theme-color-light-white: rgba(255, 255, 255, 0.8);
+
+  --theme-color-secondary-accent: rgba(255, 191, 195, 0.8);
+  --theme-color-tertiary-accent: rgba(224, 122, 95, 0.8);
+}

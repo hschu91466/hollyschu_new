@@ -1,0 +1,12 @@
+{
+    "name": "hollyannie/hollyschu_new",
+    "authors": [
+        {
+            "name": "Holly Schu",
+            "email": "holly.schu14@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
