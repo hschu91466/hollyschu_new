@@ -1,24 +1,18 @@
-import VideoBackground from "./components/layout/VideoBackground";
-import Navigation from "./components/layout/Navigation";
-import Home from "./components/sections/Home";
-import Experience from "./components/sections/Experience";
-import Portfolio from "./components/sections/Portfolio";
-import About from "./components/sections/About";
-import Contact from "./components/sections/Contact";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import MainPage from "./components/pages/MainPage";
+import SPFormsPage from "./components/pages/SPFormsPage";
+import PuzzlePage from "./components/pages/PuzzlePage";
 
 function App() {
   return (
-    <>
-      <VideoBackground />
-      <Navigation />
-      <main id="main-content">
-        <Home />
-        <Experience />
-        <Portfolio />
-        <About />
-        <Contact />
-      </main>
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/sp-forms" element={<SPFormsPage />} />
+        <Route path="/puzzle" element={<PuzzlePage />} />
+      </Route>
+    </Routes>
   );
 }
 

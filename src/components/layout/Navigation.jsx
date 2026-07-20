@@ -1,10 +1,12 @@
 import { useState, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import useActiveSection from "../../hooks/useActiveSection";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [activeSection, setActiveSection] = useState("home");
   const navRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -20,7 +22,7 @@ const Navigation = () => {
 
   const activeSection = useActiveSection(sections.map((s) => s.id));
 
-  const scrollToSection = (id) => {
+  const doScroll = (id) => {
     const target = document.getElementById(id);
     const headerHeight = navRef.current?.offsetHeight || 0;
 
@@ -28,6 +30,19 @@ const Navigation = () => {
       const targetOffset =
         target.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top: targetOffset, behavior: "smooth" });
+    }
+  };
+
+  const scrollToSection = (id) => {
+    // Section elements (Home, Experience, etc.) only exist in the DOM
+    // while MainPage is rendered — i.e. on "/". If we're on another
+    // route (like /sp-forms), navigate home first and wait a tick for
+    // MainPage to mount before trying to scroll to the section.
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => doScroll(id), 100);
+    } else {
+      doScroll(id);
     }
     setMenuOpen(false);
   };
@@ -74,7 +89,9 @@ const Navigation = () => {
                   "site-nav-link" +
                   (activeSection === section.id ? " is-active" : "")
                 }
-                aria-current="location"
+                aria-current={
+                  activeSection === section.id ? "location" : undefined
+                }
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection(section.id);

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITS Organizational Chart</title>
+    <link rel="stylesheet" href="css/orgchart.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="ocheader">
+        <a href="/#portfolio"><h5>Back to Portfolio ></h5></a>
+        <h2>ITS Organization Chart</h2>
+      </div>
+      <div id="sidebar">
+        <div id="toolbar">
+          <button type="button" class="sidebarbtn" id="ocShowAll">
+            Expand All
+          </button>
+          <button type="button" class="sidebarbtn" id="ocCollapseAll">
+            Collapse All</button
+          ><br />
+          <button type="button" class="sidebarbtn" id="ocZoomIn">Zoom In</button
+          ><br />
+          <button type="button" class="sidebarbtn" id="ocZoomOut">
+            Zoom Out</button
+          ><br />
+          <button type="button" class="sidebarbtn" id="ocReset">
+            Reset Page
+          </button>
+          <button type="button" class="sidebarbtn" id="ocPrint">Print</button>
+          <button type="button" class="sidebarbtn" id="ocSearch">
+            Search Employees
+          </button>
+          <label for="searchEmployee" class="sr-only"
+            >Search employees by name</label
+          >
+          <input type="text" id="searchEmployee" />
+          <input type="button" id="searchbtn" value="Search" />
+        </div>
+        <p>
+          Click on the triangles to expand individual branches.<br /><br />
+          Click and drag to reposition the chart.<br />
+        </p>
+        <div id="employee-count" aria-live="polite"></div>
+        <!--            <div id="coordinates">a</div>-->
+      </div>
+      <div id="content">
+        <div id="draggable" class="ui-widget-content">
+          <div id="orgchart" class="octree"></div>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/orgchart.js"></script>
+  </body>
+</html>

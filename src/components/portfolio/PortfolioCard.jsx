@@ -2,6 +2,8 @@
 //   { title, tech, image, link (string | null), buttonText }
 //  link: null means the project has no external site (e.g. "This Site" —
 //  you're already on it), so no link/button is rendered, just a status label.
+import { Link } from "react-router-dom";
+
 const PortfolioCard = ({ project }) => {
   return (
     <div className="card-item">
@@ -11,14 +13,20 @@ const PortfolioCard = ({ project }) => {
         <b>Technology:</b> {project.tech}
       </p>
       {project.link ? (
-        <a
-          className="message-button"
-          href={project.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {project.buttonText}
-        </a>
+        project.internal ? (
+          <Link className="message-button" to={project.link}>
+            {project.buttonText}
+          </Link>
+        ) : (
+          <a
+            className="message-button"
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {project.buttonText}
+          </a>
+        )
       ) : (
         <span className="message-button" aria-disabled="true">
           {project.buttonText}

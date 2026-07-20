@@ -1,0 +1,75 @@
+.sp-forms-section {
+  min-height: 100vh;
+  padding-block: 60px 40px;
+  padding-inline: 10%;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.sp-forms-heading {
+  color: var(--theme-color-primary-dark);
+}
+
+.sp-forms-intro {
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.accordion {
+  max-width: 900px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.accordion-heading {
+  margin: 0;
+}
+
+.accordion-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  background: #f7f7f7;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-toggle:hover {
+  background: #eee;
+}
+
+.accordion-toggle[aria-expanded="true"] {
+  background: var(--theme-color-primary-a11y);
+  color: #fff;
+}
+
+.accordion-panel {
+  padding: 1.5rem 1rem;
+}
+
+.sp-form-card {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.sp-form-image {
+  max-width: 320px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.sp-form-text {
+  flex: 1;
+  min-width: 250px;
+  color: #444;
+  line-height: 1.6;
+}

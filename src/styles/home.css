@@ -3,7 +3,7 @@
 }
 
 #home hr {
-  border: 0.5;
+  border: none;
   border-top: 2px solid var(--theme-color-primary-dark);
   box-shadow: 0 1px 3px var(--theme-color-tertiary-dark);
 }
@@ -96,7 +96,7 @@
 .current-check {
   margin-left: 8px;
   font-size: 18px;
-  color: var(--theme-color-primary-dark);
+  color: var(--theme-color-primary-a11y);
   opacity: 0.7;
   flex-shrink: 0;
 }
@@ -111,19 +111,6 @@
   border-radius: 20px;
   font-size: 0.85rem;
   color: #3b3b3b;
-}
-
-/* Rotate the accent color across boxes so categories are easy to tell apart */
-#tech-h .tech-box:nth-child(4n + 2) .tech-icon {
-  background: var(--theme-color-secondary-dark);
-}
-
-#tech-h .tech-box:nth-child(4n + 3) .tech-icon {
-  background: var(--theme-color-tertiary-dark);
-}
-
-#tech-h .tech-box:nth-child(4n) .tech-icon {
-  background: var(--theme-color-secondary-medium);
 }
 
 .icon-pair {

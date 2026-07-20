@@ -1,0 +1,81 @@
+.puzzle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  width: max-content;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  background-image: url("../../public/images/sliding_puzzle/train2.png");
+  background-size: 300px 300px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tile:focus-visible {
+  outline: 3px solid var(--theme-color-primary-a11y);
+  outline-offset: -3px;
+}
+
+.empty {
+  background: #ccc;
+  cursor: default;
+}
+
+.puzzle-shuffle-btn {
+  font-size: 1rem;
+  padding: 8px 24px;
+}
+
+.puzzle-status {
+  min-height: 1.5em;
+  margin: 0;
+  font-weight: 600;
+  color: var(--theme-color-primary-dark);
+}
+
+@media screen and (max-width: 767px) {
+  #puzzle-container {
+    margin: 0 -15px;
+  }
+}
+.puzzle-page-section {
+  min-height: 100vh;
+  padding-block: 60px 40px;
+  padding-inline: 10%;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--theme-color-primary-a11y);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.puzzle-page-heading {
+  color: var(--theme-color-primary-dark);
+}
+
+.puzzle-page-intro {
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: #444;
+}
