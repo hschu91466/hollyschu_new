@@ -20,4 +20,7 @@
 
   --theme-color-secondary-accent: rgba(255, 191, 195, 0.8);
   --theme-color-tertiary-accent: rgba(224, 122, 95, 0.8);
+
+  --theme-color-primary-a11y: rgb(0, 118, 205);
+  --theme-color-secondary-a11y: rgb(0, 120, 130);
 }

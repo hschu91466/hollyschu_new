@@ -1,5 +1,7 @@
 import TechStackGrid from "../TechStackGrid";
 import "../../styles/home.css";
+
+// Landing section: profile photo, intro bio, and the Tech Stack grid below.
 const Home = () => {
   return (
     <section id="home">
@@ -18,7 +20,7 @@ const Home = () => {
         </p>
       </div>
 
-      <h3 className="tech-heading">Tech Stack</h3>
+      <h4 className="tech-heading">Tech Stack</h4>
       <TechStackGrid />
     </section>
   );

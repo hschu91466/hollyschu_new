@@ -1,3 +1,11 @@
+// Tech stack grouped by category for the Home section.
+// Each item is either:
+//   - { name, icon, icon2?, current } — single label, one or two icons
+//   - { name, pairs: [{ icon, label }], current } — used when the item
+//     is really two techs (e.g. "HTML/CSS"), so each icon gets its own
+//     label instead of sharing one combined name.
+// current: true renders a checkmark instead of relying on color alone.
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -117,18 +125,17 @@ const TechStackGrid = () => {
               <li key={item.name}>
                 {item.pairs ? (
                   item.pairs.map((pair, index) => (
-                    <span
-                      key={pair.label}
-                      style={{ display: "inline-flex", alignItems: "center" }}
-                    >
+                    <span key={pair.label} className="icon-pair">
                       {index > 0 && <span className="pair-separator">/</span>}
-                      <span className="item-icon">{pair.icon}</span>
+                      <span className="item-icon" aria-hidden="true">
+                        {pair.icon}
+                      </span>
                       {pair.label}
                     </span>
                   ))
                 ) : (
                   <>
-                    <span className="item-icon">
+                    <span className="item-icon" aria-hidden="true">
                       {item.icon}
                       {item.icon2}
                     </span>
@@ -136,14 +143,20 @@ const TechStackGrid = () => {
                   </>
                 )}
                 {item.current && (
-                  <FaCheck className="current-check" title="Currently using" />
+                  <FaCheck
+                    className="current-check"
+                    title="Currently using"
+                    role="img"
+                  />
                 )}
               </li>
             ))}
           </ul>
         </div>
       ))}
-      <div className="tech-legend">* Using in current projects</div>
+      <div className="tech-legend">
+        <FaCheck className="current-check" aria-hidden="true" /> Currently using
+      </div>
     </div>
   );
 };

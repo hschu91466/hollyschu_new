@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -54,10 +54,17 @@ const projects = [
 const Portfolio = () => {
   return (
     <section id="portfolio">
+      <h3 className="sr-only">Portfolio Projects</h3>
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, A11y]}
         navigation
         pagination={{ clickable: true }}
+        loop={true}
+        a11y={{
+          prevSlideMessage: "Previous project",
+          nextSlideMessage: "Next project",
+          paginationBulletMessage: "Go to project {{index}}",
+        }}
         spaceBetween={24}
         slidesPerView={1}
         breakpoints={{

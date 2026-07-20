@@ -126,6 +126,11 @@
   background: var(--theme-color-secondary-medium);
 }
 
+.icon-pair {
+  display: inline-flex;
+  align-items: center;
+}
+
 .pair-separator {
   margin: 0 8px;
   color: #999;

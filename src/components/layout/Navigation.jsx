@@ -34,6 +34,12 @@ const Navigation = () => {
 
   return (
     <nav className="site-nav" aria-label="Main navigation" ref={navRef}>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <h1 className="sr-only">
+        Holly Schu – Full-Stack Web Developer Portfolio
+      </h1>
       <div className="brand-bar">
         <div className="nav-brand">
           <span className="nav-logo">
@@ -44,9 +50,9 @@ const Navigation = () => {
             <p className="nav-tagline">Full-Stack Web Developer</p>
           </div>
         </div>
-        <a href="/login" className="login-link">
+        {/* <a href="/login" className="login-link">
           Login
-        </a>
+        </a> */}
       </div>
 
       <div className="links-bar">
@@ -68,6 +74,7 @@ const Navigation = () => {
                   "site-nav-link" +
                   (activeSection === section.id ? " is-active" : "")
                 }
+                aria-current="location"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection(section.id);

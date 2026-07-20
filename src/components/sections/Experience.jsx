@@ -12,6 +12,7 @@ const Experience = () => {
       title: "IT App Development - Journey",
       dates: "Washington State University - 10/2024 – Present",
       bullets: [
+        "Designed and built a large-scale survey system in PeopleSoft for the Graduate School.",
         "Support and troubleshoot issues in PeopleSoft, including adding new features to enhance functionality and user experience.",
         "Troubleshoot and resolve various JIRA-related issues across multiple projects and teams.",
         {
@@ -69,6 +70,21 @@ const Experience = () => {
     },
   ];
 
+  const certifications = [
+    {
+      title: "MS-10175: Microsoft SharePoint 2010 Application Development",
+      dates: "QuickStart Intelligence / Microsoft Learning - 2012",
+    },
+  ];
+
+  const linkedinLearning = [
+    "Web Development – Programming Foundations, Full-Stack vs. Front-End, Responsive Design",
+    "Front-End – HTML, JavaScript, JSON Integration, jQuery, Bootstrap 3 & 4, Sass, React.js Basics",
+    "Database – SQL Essential Training, Database Foundations",
+    "Tools & Workflow – Git and GitHub, SharePoint Tips and Tricks",
+    "Design – User Experience for Web Designers, Photoshop CC Essentials",
+  ];
+
   return (
     <section id="experience">
       <div className="paper">
@@ -83,8 +99,8 @@ const Experience = () => {
           at Washington State University, beginning in 2003. While my background
           has focused on application support and development, I have
           consistently worked across both front-end and back-end technologies,
-          including HTML, CSS, JavaScript, PHP, MySQL, and JSON. My portfolio
-          includes custom web applications, SharePoint and WordPress
+          including HTML, CSS, JavaScript, React, PHP, MySQL, and JSON. My
+          portfolio includes custom web applications, SharePoint and WordPress
           enhancements, and JIRA-based systems. I am now seeking opportunities
           in full-stack development where I can apply my broad technical
           foundation, problem-solving skills, and collaborative approach to
@@ -135,8 +151,8 @@ const Experience = () => {
         <div>
           <h4>Education & Training</h4>
           <ul>
-            {education.map((item) => (
-              <li key={item.title} className="blue-squares">
+            {certifications.map((item) => (
+              <li key={item.title} className="plain-li">
                 <div className="title">
                   <hr />
                   <h5>{item.title}</h5>
@@ -145,6 +161,43 @@ const Experience = () => {
                 <h6>{item.dates}</h6>
               </li>
             ))}
+            {education.map((item) => (
+              <li key={item.title} className="plain-li">
+                <div className="title">
+                  <hr />
+                  <h5>{item.title}</h5>
+                  <hr />
+                </div>
+                <h6>{item.dates}</h6>
+              </li>
+            ))}
+            <li className="plain-li">
+              <div className="title">
+                <hr />
+                <h5>LinkedIn Learning (Lynda.com) Coursework</h5>
+                <hr />
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            {linkedinLearning.map((item, index) => (
+              <li key={index} className="blue-squares">
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <ul>
+            <li className="plain-li">
+              <div className="title">
+                <hr />
+                <h5>Continued Learning</h5>
+                <hr />
+              </div>
+              Ongoing self-directed study through LinkedIn Learning (Lynda.com)
+              and Udemy, applying new skills directly to real project work.
+            </li>
           </ul>
         </div>
       </div>

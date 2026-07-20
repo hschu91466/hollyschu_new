@@ -96,9 +96,20 @@
   border: 1.5px solid var(--theme-color-primary-dark);
   background: transparent;
 }
+.plain-li {
+  list-style: none;
+}
+
+.title hr:first-of-type {
+  margin-top: 16px;
+}
+
+.title h5 {
+  margin-top: 6px;
+}
 
 @media (max-width: 600px) {
   .paper {
-padding: 1em;
+    padding: 1em;
   }
 }

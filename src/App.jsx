@@ -11,11 +11,13 @@ function App() {
     <>
       <VideoBackground />
       <Navigation />
-      <Home />
-      <Experience />
-      <Portfolio />
-      <About />
-      <Contact />
+      <main id="main-content">
+        <Home />
+        <Experience />
+        <Portfolio />
+        <About />
+        <Contact />
+      </main>
     </>
   );
 }

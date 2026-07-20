@@ -10,17 +10,17 @@ const highlights = [
 
 function About() {
   return (
-    <section id="about" className="">
+    <section id="about">
       <div className="about-section">
         <div className="about-grid">
           <div className="about-column">
-            <h3 className="about-heading">About Me</h3>
+            <h4 className="about-heading">About Me</h4>
             <div className="about-bio about-panel">
               <p>
-                <span class="greeting">Hi, I'm Holly!</span> I am an Application
-                Systems Developer at Washington State University with more than
-                20 years of experience spanning desktop support, web
-                development, and application development.
+                <span className="greeting">Hi, I'm Holly!</span> I am an
+                Application Systems Developer at Washington State University
+                with more than 20 years of experience spanning desktop support,
+                web development, and application development.
               </p>
               <p className="about-bio-secondary">
                 Outside of work, you'll usually find me camping with my family,
@@ -30,11 +30,11 @@ function About() {
           </div>
 
           <div className="about-column">
-            <h3 className="about-heading">What I love about programming</h3>
+            <h4 className="about-heading">What I love about programming</h4>
             <div className="about-panel">
               <ul className="about-highlights-list">
                 {highlights.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li className="blue-squares" key={item}>{item}</li>
                 ))}
               </ul>
             </div>

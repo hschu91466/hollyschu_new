@@ -1,3 +1,8 @@
+// Contact form — posts to /api/contact/send.php.
+// Expects { success: boolean } in the response; on success, clears the
+// form and shows a status message. See ContactController/ContactModel
+// on the backend for the corresponding validation.
+
 import { useState } from "react";
 import axios from "axios";
 import "../../styles/contact.css";
@@ -45,13 +50,13 @@ const Contact = () => {
     <section id="contact">
       <div className="contact-panel">
         <h4>Contact</h4>
-
         <form className="contact-form" onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
           <input
             id="name"
             name="name"
             type="text"
+            autoComplete="name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -62,6 +67,7 @@ const Contact = () => {
             id="email"
             name="email"
             type="email"
+            autoComplete="email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -81,6 +87,7 @@ const Contact = () => {
             type="submit"
             className="message-button"
             disabled={submitting}
+            aria-busy={submitting}
           >
             {submitting ? "Sending..." : "Send"}
           </button>
